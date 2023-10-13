@@ -20,7 +20,11 @@ async def on_message(message):
         risultato = random.choice(['Testa', 'Croce'])
         await message.channel.send(f'Hai lanciato una moneta e è uscito: {risultato}')
 
+    if message.content.startswith('/numero_casuale'):
+        risultato = random.choice(['Uno', 'Due', 'Tre', 'Quattro', 'Cinque'])
+        await message.channel.send(f'Hai lanciato un numero casuale ed è uscito: {risultato}')
+
 # Inserisci il tuo token del bot Discord qui
-TOKEN = 'MTE1NzYxODk4NTc5NDI4NTYxOA.Gsjw1T.JqaBVPiPOuAMvvTvM446kLDL2-Z5x3SAj9KmyQ'
+TOKEN = 'MTE1NzYxODk4NTc5NDI4NTYxOA.G9Tow9._xdzxCG6TmSfLu_sDylmDlmBOuWzGKC4oShruA'
 
 client.run(TOKEN)
